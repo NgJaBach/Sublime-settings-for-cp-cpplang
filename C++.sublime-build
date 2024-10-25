@@ -8,8 +8,20 @@
   "variants":
   [
     {   
-      "name": "Run",
+      "name": "Run with C++98",
+      "shell_cmd": "g++ -Wall -std=c++98 \"${file}\" -o \"${file_base_name}\" && start cmd /c \"\"${file_path}/${file_base_name}\" & pause\""
+    },
+    {   
+      "name": "Run with C++11",
       "shell_cmd": "g++ -Wall -std=c++11 \"${file}\" -o \"${file_base_name}\" && start cmd /c \"\"${file_path}/${file_base_name}\" & pause\""
+    },
+    {   
+      "name": "Run with C++20",
+      "shell_cmd": "g++ -Wall -std=c++20 \"${file}\" -o \"${file_base_name}\" && start cmd /c \"\"${file_path}/${file_base_name}\" & pause\""
+    },
+    {   
+      "name": "Run with C++23",
+      "shell_cmd": "g++ -Wall -std=c++23 \"${file}\" -o \"${file_base_name}\" && start cmd /c \"\"${file_path}/${file_base_name}\" & pause\""
     }
   ]
 }
